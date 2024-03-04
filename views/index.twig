@@ -1,0 +1,26 @@
+{% include "header.twig" %}
+<style>
+  h1{
+    color: red;
+  }
+  h2{
+    color: blue;
+  }
+  </style>
+
+<h1> {{ title }} </h1>
+<h2> Hello {{ name }}! </h2>
+
+{% if age >= 18 %}
+   you are an adult.
+{% else %}
+   you are a minor.
+{% endif%}
+
+{% macro input(name, value) %}
+    <input type="text" name="{{ name }}" value="{{ value }}">
+{% endmacro %}
+
+CWS
+
+{% include "footer.twig" %}
